@@ -5,12 +5,36 @@ $(document).ready(function(){
     $(window).scroll(300,function(){
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             $(".navigator").css({
-                "padding":"5px 10px"
+                "padding":"1vh 10px"
             })
         }
         else{
             $(".navigator").css({
-                "padding":"30px 10px"
+                "padding":"2vh 10px"
+            })
+        }
+
+        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+            $(".myPicture").css({
+                "position":"fixed",
+                "top":"0",
+                "width": "6vw",
+                "left" : "6%",
+                "border" : "aliceblue 3px solid"
+            })
+            $(".pageTitle").css({
+                "left": "17%"
+            })
+        }
+        else{
+            $(".myPicture").css({
+                "position":"absolute",
+                "top":"100vh",
+                "width": "12vw",
+                "left" : "50%",
+            })
+            $(".pageTitle").css({
+                "left": "10%"
             })
         }
     })
@@ -42,4 +66,56 @@ function callAll(){
         
     }
     
+}
+
+function cardOut(cardname){
+    let choosen = document.querySelector(`[data-name=${CSS.escape(cardname)}]`);
+    /*$('#shadowbox').css({
+        "opacity":"0",
+        "visibility":"hidden"
+    })*/
+    if(cardname == "maincard"){
+        choosen.vanillaTilt.destroy();
+        $('#monstercard').css({
+            "top":"0",
+            "left":"0"
+        })
+    }else if(cardname == "coffeecard"){
+        choosen.vanillaTilt.destroy();
+        $('#magiccard').css({
+            "top":"0",
+            "left":"0"
+        })
+    }
+    choosen.style.transform = "rotateY(180deg)";  
+}
+
+function cardIn(cardname){
+    let choosen = document.querySelector(`[data-name=${CSS.escape(cardname)}]`);
+    $('#shadowbox').css({
+        "opacity":"1",
+        "visibility":"visible"
+    })
+    VanillaTilt.init(choosen, {
+        max: 10,
+        speed: 1000,
+        glare: true,
+        startX: 0,
+        startY: 0,
+        "max-glare": 0.5,
+        scale: 1.1,
+        perspective: 1500
+    });
+    if(cardname == "maincard"){
+        $('#monstercard').css({
+            "top":"0",
+            "left":"0"
+        })
+    }else if(cardname == "coffeecard"){
+        $('#magiccard').css({
+            "top":"0",
+            "left":"0"
+        })
+    }
+    choosen.style.transform = "rotateY(0deg)";
 }

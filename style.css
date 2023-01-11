@@ -6,6 +6,7 @@
 body{
     overflow-X: hidden;
     background-color: azure;
+    scroll-behavior: smooth;
 }
 .coverphoto{
     position: fixed;
@@ -59,7 +60,7 @@ body{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 8vh;
+    height: 5vh;
     z-index: 5;
     padding: 30px 10px;
     background-color: aliceblue;
@@ -68,8 +69,9 @@ body{
 H1{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%,-50%);
+    font-family: 'Courier New', Courier, monospace;
 }
 .contents{
     background-color: aliceblue;
@@ -87,12 +89,260 @@ H1{
 }
 
 .myPicture{
-    position: relative;
+    position: absolute;
     border-radius: 50%;
-    top: -100px;
+    top: 100vh;
+    left: 50%;
+    transform: translate(-50%);
     height: auto;
-    width: 200px;
+    width: 12vw;
     margin-bottom: 0vh;
+    z-index: 5;
+}
+
+/*cards*/
+#shadowbox{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 10;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -ms-transition: opacity 200ms linear;
+    -o-transition: opacity 200ms linear;
+    transition: opacity 400ms linear;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    position:relative;
+    width: 400px;
+    height: 580px;
+    border-radius: 10px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg) rotateZ(0deg);
+    margin: 0 !important;
+    z-index: 3;
+}
+#monstercard{
+    top: 0;
+    left: 0;
+}
+.mypic{
+    position: inherit;
+    top: 105px;
+    left: 47px;
+    z-index: -1;
+}
+.mypic img{
+    width: 305px;
+}
+.front{
+    background-image: url(Img/monster-normal.png);
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 400px;
+    height: 580px;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+}
+#back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 580px;
+    border-radius: 8px;
+    z-index: -2;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+#cardTitle{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    position: relative;
+    left: 230px;
+    top: 45px;
+}
+/* star levels */
+#starLevel {
+    position: relative;
+    width: 22px;
+    left: 335px;
+    top: 40px;
+}
+#starLevel2 {
+    position: relative;
+    width: 22px;
+    left: 285px;
+    top: 40px;
+}
+#starLevel3 {
+    position: relative;
+    width: 22px;
+    left: 235px;
+    top: 40px;
+}
+#starLevel4 {
+    position: relative;
+    width: 22px;
+    left: 185px;
+    top: 40px;
+}
+#starLevel5 {
+    position: relative;
+    width: 22px;
+    left: 135px;
+    top: 40px;
+}
+#starLevel6 {
+    position: relative;
+    width: 22px;
+    left: 85px;
+    top: 40px;
+}
+#starLevel7 {
+    position: relative;
+    width: 22px;
+    left: 35px;
+    top: 40px;
+}
+#starLevel8 {
+    position: relative;
+    width: 22px;
+    left: -15px;
+    top: 40px;
+}
+#starLevel9 {
+    position: relative;
+    width: 22px;
+    left: -65px;
+    top: 40px;
+}
+#starLevel10 {
+    position: relative;
+    width: 22px;
+    left: -115px;
+    top: 40px;
+}
+#starLevel11 {
+    position: relative;
+    width: 22px;
+    left: -165px;
+    top: 40px;
+}
+#starLevel12 {
+    position: relative;
+    width: 22px;
+    left: -215px;
+    top: 40px;
+    visibility: hidden;
+}
+#cardType {
+    position: relative;
+    width: 25px;
+    left: 32px;
+    top: 5px;
+}
+#monsterType {
+    position: relative;
+    left: 30px;
+    top: 380px;
+}
+#monsterDescription {
+    position: relative;
+    left: 35px;
+    top: 382px;
+    font-size: 12px;
+    max-width: 335px;
+    font-style: italic;
+}
+#monsterAtk {
+    position: relative;
+    left: 262px;
+    bottom: -392px;
+    font-size: 14px;
+    max-width: 335px;
+    font-weight: bold;
+}
+#monsterDef {
+    position: relative;
+    left: 342px;
+    bottom: -376px;
+    font-size: 14px;
+    max-width: 335px;
+    font-weight: bold;
+}
+
+/*Magic card*/
+#magiccard{
+    top: 0vh;
+    left: 0vw;
+}
+.magicfront{
+    background-image: url(Img/magic.png);
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 400px;
+    height: 580px;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+    
+}
+.magicpic{
+    position: relative;
+    top: 75px;
+    left: 45px;
+    z-index: -2;
+}
+.magicpic img{
+    width: 309px;
+}
+#magicback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 580px;
+    border-radius: 8px;
+    z-index: -2;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+#card1Title{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+    left: 225px;
+    top: 44px;
+}
+#magicDescription {
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    top: 440px;
+    font-size: 14px;
+    max-width: 335px;
 }
 
 .posts{
