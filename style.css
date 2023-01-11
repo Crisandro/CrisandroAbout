@@ -54,6 +54,17 @@ body{
     transition: 0s;
     background: #0f0;
 }
+.navigator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    z-index: 5;
+    padding: 30px 10px;
+    background-color: aliceblue;
+    transition: 1s;
+}
 H1{
     position: absolute;
     top: 50%;

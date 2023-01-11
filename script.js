@@ -2,7 +2,18 @@ $(document).ready(function(){
     callAll();
     console.log("ready !");
 
-
+    $(window).scroll(300,function(){
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            $(".navigator").css({
+                "padding":"5px 10px"
+            })
+        }
+        else{
+            $(".navigator").css({
+                "padding":"30px 10px"
+            })
+        }
+    })
     
 })
 
