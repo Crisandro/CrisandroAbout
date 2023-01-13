@@ -10,6 +10,10 @@ body{
 }
 .coverphoto{
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -2;
     overflow: hidden;
     height: 100vh;
@@ -39,7 +43,7 @@ body{
     background: #111;
     margin: 1px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: 2s;
+    transition: 1s;
 }
 .hexagon:before{
     content: '';
@@ -60,28 +64,28 @@ body{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 5vh;
+    height: 1vw;
     z-index: 5;
-    padding: 30px 10px;
+    padding: 1.5vw 10px;
     background-color: aliceblue;
-    transition: 1s;
 }
 H2{
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 2vw;
+    left: 5vw;
     transform: translate(-50%,-50%);
-    font-size: 3em;
+    font-size: 2vw;
     font-family: 'Courier New', Courier, monospace;
     display: none;
     transition: 1s;
 }
 .links{
     position: absolute;
-    right: 10%;
-    top: 30%;
+    right: 10vw;
+    top: 1.5vw;
     display: flex;
     justify-content: flex-end;
+    height: 40%;
 }
 a {
     display: block;
@@ -274,11 +278,9 @@ a {
     position: fixed;
     border-radius: 50%;
     top: 0;
-    left: 6%;
-    transform: translate(-50%);
+    left: 5vw;
     height: auto;
     width: 6vw;
-    margin-bottom: 0vh;
     z-index: 5;
     border: aliceblue 3px solid;
     display: none;
@@ -289,13 +291,13 @@ a {
 .Name{
     position: absolute;
     transform: translate(-50%,-50%);
-    top : 55%;
-    left: 70%;
-    width: 40%;
+    top : 26vw;
+    left: 69vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     color: azure;
-    font-size: 3em;
+    font-size: 2vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .myTitle{
@@ -571,8 +573,8 @@ a {
  
 .card{
     position:absolute;
-    width: 400px;
-    height: 580px;
+    width: 20.8vw;
+    height: 30.3vw;
     border-radius: 10px;
     transition: 0.5s;
     transform-style: preserve-3d;
@@ -585,26 +587,29 @@ a {
     left: 25%;
 }
 .mypic{
-    position: inherit;
-    top: 105px;
-    left: 47px;
+    position: absolute;
+    top: 5vw;
+    left: 2.4vw;
     z-index: -1;
 }
 .mypic img{
-    width: 305px;
+    width: 18vw;
 }
 .front{
-    background-image: url(Img/monster-normal.png);
     position: absolute;
     top: 0vh;
     left: 0vw;
-    width: 400px;
-    height: 580px;
+    width: 20.8vw;
+    height: 30.3vw;
     border-radius: 10px;
     z-index: 0;
     overflow: hidden;
     visibility: visible;
     -webkit-backface-visibility: hidden;
+}
+.cardFront{
+    width: 20.8vw;
+    height: 30.3vw;
 }
 #back{
     position: absolute;
@@ -619,118 +624,119 @@ a {
 }
 #cardTitle{
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 25px;
-    position: relative;
-    left: 30px;
-    top: 33px;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 1.8vw;
+    top: 1.7vw;
+    z-index: 5;
 }
 /* star levels */
 #starLevel {
-    position: relative;
-    width: 22px;
-    left: 335px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 17.5vw;
+    top: 3.7vw;
 }
 #starLevel2 {
-    position: relative;
-    width: 22px;
-    left: 285px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 16.2vw;
+    top: 3.7vw;
 }
 #starLevel3 {
-    position: relative;
-    width: 22px;
-    left: 235px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 14.9vw;
+    top: 3.7vw;
 }
 #starLevel4 {
-    position: relative;
-    width: 22px;
-    left: 185px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 13.6vw;
+    top: 3.7vw;
 }
 #starLevel5 {
-    position: relative;
-    width: 22px;
-    left: 135px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 12.3vw;
+    top: 3.7vw;
 }
 #starLevel6 {
-    position: relative;
-    width: 22px;
-    left: 85px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 11vw;
+    top: 3.7vw;
 }
 #starLevel7 {
-    position: relative;
-    width: 22px;
-    left: 35px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 9.7vw;
+    top: 3.7vw;
 }
 #starLevel8 {
-    position: relative;
-    width: 22px;
-    left: -15px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 8.4vw;
+    top: 3.7vw;
 }
 #starLevel9 {
-    position: relative;
-    width: 22px;
-    left: -65px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 7.1vw;
+    top: 3.7vw;
 }
 #starLevel10 {
-    position: relative;
-    width: 22px;
-    left: -115px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 5.8vw;
+    top: 3.7vw;
 }
 #starLevel11 {
-    position: relative;
-    width: 22px;
-    left: -165px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 4.5vw;
+    top: 3.7vw;
 }
 #starLevel12 {
-    position: relative;
-    width: 22px;
-    left: -215px;
-    top: 40px;
+    position: absolute;
+    width: 1.2vw;
+    left: 3.2vw;
+    top: 3.7vw;
     visibility: hidden;
 }
 #cardType {
-    position: relative;
-    width: 25px;
-    left: 32px;
-    top: 5px;
+    position: absolute;
+    width: 1.5vw;
+    left: 17.7vw;
+    top: 1.7vw;
 }
 #monsterType {
-    position: relative;
-    left: 30px;
-    top: 380px;
+    position: absolute;
+    left: 1.5vw;
+    top: 22.8vw;
+    font-size: .8vw;
+
 }
 #monsterDescription {
-    position: relative;
-    left: 35px;
-    top: 382px;
-    font-size: 12px;
-    max-width: 335px;
+    position: absolute;
+    left: 1.8vw;
+    top: 23.9vw;
+    font-size: 0.7vw;
+    max-width: 17.2vw;
     font-style: italic;
 }
 #monsterAtk {
-    position: relative;
-    left: 262px;
-    bottom: -392px;
-    font-size: 14px;
-    max-width: 335px;
+    position: absolute;
+    left: 13.5vw;
+    top: 27.5vw;
+    font-size: .8vw;
     font-weight: bold;
 }
 #monsterDef {
-    position: relative;
-    left: 342px;
-    bottom: -376px;
-    font-size: 14px;
-    max-width: 335px;
+    position: absolute;
+    left: 17.7vw;
+    top: 27.5vw;
+    font-size: .8vw;
     font-weight: bold;
 }
 

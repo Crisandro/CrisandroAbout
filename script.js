@@ -35,12 +35,13 @@ $(document).ready(function(){
     $(window).scroll(300,function(){
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             $(".navigator").css({
-                "padding":"1vh 10px"
+                "padding":"1.5vw 10px"
             })
         }
         else{
             $(".navigator").css({
-                "padding":"2vh 10px"
+                "padding":"1.5vw 10px",
+                
             })
         }
 
@@ -49,12 +50,12 @@ $(document).ready(function(){
                 "position":"fixed",
                 "top":"0",
                 "width": "6vw",
-                "left" : "6%",
+                "left" : "5vw",
                 "border" : "aliceblue 3px solid",
                 "display" : "block"
             })
             $(".pageTitle").css({
-                "left": "21%",
+                "left": "21vw",
                 "display": "block"
             })
         }
@@ -63,7 +64,6 @@ $(document).ready(function(){
                 "display":"none",
             })
             $(".pageTitle").css({
-                "left": "10%",
                 "display": "none"
             })
         }
