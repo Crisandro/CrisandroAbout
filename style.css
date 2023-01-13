@@ -819,7 +819,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
-.arts img{
+.arts > *{
     width: 15vw;
     height: auto;
 }
@@ -845,4 +845,12 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.insideShadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: auto;
 }
